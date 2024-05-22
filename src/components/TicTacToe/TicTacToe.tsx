@@ -143,56 +143,58 @@ export function TicTacToe() {
 
   return (
     <div className={styles.container}>
-      <header className={styles.header}>
-        <div>
-          <p>Round: {round}</p>
-          <p>Vez do: {turn}</p>
-        </div>
+      <div>
+        <header className={styles.header}>
+          <div>
+            <p>Round: {round}</p>
+            <p>Vez do: {turn}</p>
+          </div>
 
-        <button className={styles.button} onClick={restartGame}>
-          Reiniciar
-        </button>
-      </header>
+          <button className={styles.button} onClick={restartGame}>
+            Reiniciar
+          </button>
+        </header>
 
-      <main className={styles.board}>
-        <div className={styles.square} onClick={() => handleBoard(0, 0)}>
-          {board[0][0] || <span className={styles.turn}>{turn}</span>}
-        </div>
-        <div className={styles.square} onClick={() => handleBoard(0, 1)}>
-          {board[0][1] || <span className={styles.turn}>{turn}</span>}
-        </div>
-        <div className={styles.square} onClick={() => handleBoard(0, 2)}>
-          {board[0][2] || <span className={styles.turn}>{turn}</span>}
-        </div>
-        <div className={styles.square} onClick={() => handleBoard(1, 0)}>
-          {board[1][0] || <span className={styles.turn}>{turn}</span>}
-        </div>
-        <div className={styles.square} onClick={() => handleBoard(1, 1)}>
-          {board[1][1] || <span className={styles.turn}>{turn}</span>}
-        </div>
-        <div className={styles.square} onClick={() => handleBoard(1, 2)}>
-          {board[1][2] || <span className={styles.turn}>{turn}</span>}
-        </div>
-        <div className={styles.square} onClick={() => handleBoard(2, 0)}>
-          {board[2][0] || <span className={styles.turn}>{turn}</span>}
-        </div>
-        <div className={styles.square} onClick={() => handleBoard(2, 1)}>
-          {board[2][1] || <span className={styles.turn}>{turn}</span>}
-        </div>
-        <div className={styles.square} onClick={() => handleBoard(2, 2)}>
-          {board[2][2] || <span className={styles.turn}>{turn}</span>}
-        </div>
+        <main className={styles.board}>
+          <div className={styles.square} onClick={() => handleBoard(0, 0)}>
+            {board[0][0] || <span className={styles.turn}>{turn}</span>}
+          </div>
+          <div className={styles.square} onClick={() => handleBoard(0, 1)}>
+            {board[0][1] || <span className={styles.turn}>{turn}</span>}
+          </div>
+          <div className={styles.square} onClick={() => handleBoard(0, 2)}>
+            {board[0][2] || <span className={styles.turn}>{turn}</span>}
+          </div>
+          <div className={styles.square} onClick={() => handleBoard(1, 0)}>
+            {board[1][0] || <span className={styles.turn}>{turn}</span>}
+          </div>
+          <div className={styles.square} onClick={() => handleBoard(1, 1)}>
+            {board[1][1] || <span className={styles.turn}>{turn}</span>}
+          </div>
+          <div className={styles.square} onClick={() => handleBoard(1, 2)}>
+            {board[1][2] || <span className={styles.turn}>{turn}</span>}
+          </div>
+          <div className={styles.square} onClick={() => handleBoard(2, 0)}>
+            {board[2][0] || <span className={styles.turn}>{turn}</span>}
+          </div>
+          <div className={styles.square} onClick={() => handleBoard(2, 1)}>
+            {board[2][1] || <span className={styles.turn}>{turn}</span>}
+          </div>
+          <div className={styles.square} onClick={() => handleBoard(2, 2)}>
+            {board[2][2] || <span className={styles.turn}>{turn}</span>}
+          </div>
 
-        <span
-          className={styles.line}
-          style={{
-            transform: `translate(-50%, -50%) rotate(${line.rotate})`,
-            display: line.display,
-            marginTop: line.margin_top,
-            marginLeft: line.margin_left,
-          }}
-        />
-      </main>
+          <span
+            className={styles.line}
+            style={{
+              transform: `translate(-50%, -50%) rotate(${line.rotate})`,
+              display: line.display,
+              marginTop: line.margin_top,
+              marginLeft: line.margin_left,
+            }}
+          />
+        </main>
+      </div>
 
       {winner && <Modal text={winner} restartGame={restartGame} />}
     </div>
