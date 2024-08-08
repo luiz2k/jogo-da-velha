@@ -9,7 +9,7 @@
 }
 
 .modal {
-  background-color: darkseagreen;
+  background-color: var(--primary);
   padding: 5rem;
 
   display: flex;

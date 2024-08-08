@@ -7,4 +7,6 @@
 
 :root {
   font-size: 62.5%;
+
+  --primary: rgb(46, 119, 214);
 }
