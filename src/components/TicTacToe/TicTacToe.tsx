@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import styles from './TicTacToe.module.css';
 import { Modal } from '../Modal/Modal';
 
-import { Board, Line } from './TicTacToe.d';
+import type { Board, Line } from './TicTacToe.d';
 
 const line: Line = {
   display: 'none',
@@ -101,7 +101,8 @@ export function TicTacToe() {
   // Lida com as jogadas no tabuleiro.
   const handleBoard = (row: number, index: number): void => {
     if (board[row][index]) {
-      return alert('Campo indisponível!');
+      alert('Campo indisponível!');
+      return;
     }
 
     setBoard((prev) => {
@@ -150,15 +151,15 @@ export function TicTacToe() {
             <p>Vez do: {turn}</p>
           </div>
 
-          <button className={styles.button} onClick={restartGame}>
+          <button type="button" className={styles.button} onClick={restartGame}>
             Reiniciar
           </button>
         </header>
 
         <main className={styles.board}>
-          <div className={styles.square} onClick={() => handleBoard(0, 0)}>
+          <button className={styles.square} onClick={() => handleBoard(0, 0)}>
             {board[0][0] || <span className={styles.turn}>{turn}</span>}
-          </div>
+          </button>
           <div className={styles.square} onClick={() => handleBoard(0, 1)}>
             {board[0][1] || <span className={styles.turn}>{turn}</span>}
           </div>
