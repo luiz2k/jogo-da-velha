@@ -157,33 +157,69 @@ export function TicTacToe() {
         </header>
 
         <main className={styles.board}>
-          <button className={styles.square} onClick={() => handleBoard(0, 0)}>
+          <button
+            type="button"
+            className={styles.square}
+            onClick={() => handleBoard(0, 0)}
+          >
             {board[0][0] || <span className={styles.turn}>{turn}</span>}
           </button>
-          <div className={styles.square} onClick={() => handleBoard(0, 1)}>
+          <button
+            type="button"
+            className={styles.square}
+            onClick={() => handleBoard(0, 1)}
+          >
             {board[0][1] || <span className={styles.turn}>{turn}</span>}
-          </div>
-          <div className={styles.square} onClick={() => handleBoard(0, 2)}>
+          </button>
+          <button
+            type="button"
+            className={styles.square}
+            onClick={() => handleBoard(0, 2)}
+          >
             {board[0][2] || <span className={styles.turn}>{turn}</span>}
-          </div>
-          <div className={styles.square} onClick={() => handleBoard(1, 0)}>
+          </button>
+          <button
+            type="button"
+            className={styles.square}
+            onClick={() => handleBoard(1, 0)}
+          >
             {board[1][0] || <span className={styles.turn}>{turn}</span>}
-          </div>
-          <div className={styles.square} onClick={() => handleBoard(1, 1)}>
+          </button>
+          <button
+            type="button"
+            className={styles.square}
+            onClick={() => handleBoard(1, 1)}
+          >
             {board[1][1] || <span className={styles.turn}>{turn}</span>}
-          </div>
-          <div className={styles.square} onClick={() => handleBoard(1, 2)}>
+          </button>
+          <button
+            type="button"
+            className={styles.square}
+            onClick={() => handleBoard(1, 2)}
+          >
             {board[1][2] || <span className={styles.turn}>{turn}</span>}
-          </div>
-          <div className={styles.square} onClick={() => handleBoard(2, 0)}>
+          </button>
+          <button
+            type="button"
+            className={styles.square}
+            onClick={() => handleBoard(2, 0)}
+          >
             {board[2][0] || <span className={styles.turn}>{turn}</span>}
-          </div>
-          <div className={styles.square} onClick={() => handleBoard(2, 1)}>
+          </button>
+          <button
+            type="button"
+            className={styles.square}
+            onClick={() => handleBoard(2, 1)}
+          >
             {board[2][1] || <span className={styles.turn}>{turn}</span>}
-          </div>
-          <div className={styles.square} onClick={() => handleBoard(2, 2)}>
+          </button>
+          <button
+            type="button"
+            className={styles.square}
+            onClick={() => handleBoard(2, 2)}
+          >
             {board[2][2] || <span className={styles.turn}>{turn}</span>}
-          </div>
+          </button>
 
           <span
             className={styles.line}
