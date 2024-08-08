@@ -1,6 +1,6 @@
 import styles from './Modal.module.css';
 
-import { ModalProps } from './Modal.d';
+import type { ModalProps } from './Modal.d';
 
 export function Modal({ text, restartGame }: ModalProps) {
   return (
@@ -8,7 +8,7 @@ export function Modal({ text, restartGame }: ModalProps) {
       <article className={styles.modal}>
         <h1 className={styles.text}>{text}</h1>
 
-        <button className={styles.button} onClick={restartGame}>
+        <button type="button" className={styles.button} onClick={restartGame}>
           OK
         </button>
       </article>
